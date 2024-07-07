@@ -1,8 +1,7 @@
-// src/services/weatherService.ts
 import axios from 'axios';
 import { Weather } from '../models/weather';
 
-const API_KEY = 'YOUR_WEATHERSTACK_API_KEY';
+const API_KEY = process.env.VUE_APP_WEATHERSTACK_API_KEY;
 const BASE_URL = 'http://api.weatherstack.com/current';
 
 export const getWeather = async (city: string): Promise<Weather> => {
